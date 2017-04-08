@@ -1,0 +1,29 @@
+﻿@model PairingTest.Web.Models.QuestionnaireViewModel
+<html>
+<head>
+    <title>@Model.QuestionnaireTitle</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+
+        <h3></h3>
+
+        @foreach (var question in Model.QuestionsText)
+        {
+            <div class="form-group row">
+                <div class="col-md-6">@Html.Label(question)</div>
+                <div class="col-md-6">@Html.TextBox("answer")</div>
+            </div>
+        }
+
+        <div class="form-group row">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
